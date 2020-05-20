@@ -17,13 +17,16 @@ def _process_csv_file(file):
 class BalanceCovidDataset(keras.utils.Sequence):
     'Generates data for Keras'
 
-    def __init__(self, data_dir,  csv_file,is_training=True,  batch_size=8,
+    def __init__(self, data_dir,  csv_file,is_training=True,isValidation=False, batch_size=8,
             input_shape=(224, 224), n_classes=3,  num_channels=3, mapping={'normal': 0,'pneumonia': 1,'COVID-19': 2},
             shuffle=True, augmentation=True, covid_percent=0.3, class_weights=[1., 1., 6.]):
         'Initialization'
+        
         self.datadir = data_dir
         self.dataset = _process_csv_file(csv_file)
+#         print(self.datadir)
         self.is_training = is_training
+        self.isValidation = isValidation
         self.batch_size = batch_size
         self.N = len(self.dataset)
         self.input_shape = input_shape
@@ -51,14 +54,13 @@ class BalanceCovidDataset(keras.utils.Sequence):
 
         datasets = {'normal': [], 'pneumonia': [], 'COVID-19': []}
         for l in self.dataset:
-            datasets[l.split()[2]].append(l)
-        
+            datasets[l.split(',')[2]].append(l)
 
         self.datasets = [
             datasets['normal'] + datasets['pneumonia'],
             datasets['COVID-19'],
         ]
-        print('#normal+pneumonia: ', len(self.datasets[0]), ' #covid19: ', len(self.datasets[1]))
+#         print('#normal+pneumonia: ', len(self.datasets_temp[0]), ' #covid19: ', len(self.datasets_temp[1]))
         #df = pd.DataFrame([l.split() for l in self.dataset])   
 
         self.on_epoch_end()
@@ -91,20 +93,22 @@ class BalanceCovidDataset(keras.utils.Sequence):
         batch_files = self.datasets[0][idx * self.batch_size:(idx + 1) * self.batch_size]
 
         # upsample covid cases
-        covid_size = max(int(len(batch_files) * self.covid_percent), 1)
-        covid_inds = np.random.choice(np.arange(len(batch_files)), size=covid_size, replace=False)
-        covid_files = np.random.choice(self.datasets[1], size=covid_size, replace=False)
-        for i in range(covid_size):
-            batch_files[covid_inds[i]] = covid_files[i]
+        # covid_size = max(int(len(batch_files) * self.covid_percent), 1)
+        # covid_inds = np.random.choice(np.arange(len(batch_files)), size=covid_size, replace=False)
+        # covid_files = np.random.choice(self.datasets[1], size=covid_size, replace=False)
+        # for i in range(covid_size):
+        #     batch_files[covid_inds[i]] = covid_files[i]
 
         for i in range(len(batch_files)):
-            sample = batch_files[i].split()
-
-            if self.is_training:
-                folder = 'train'
+            sample = batch_files[i].split(',')
+            
+            if self.isValidation:
+                folder ='val2'
+            elif self.is_training:
+                folder = 'train2'
             else:
-                folder = 'test'
-
+                folder = 'test2'
+            
             x = cv2.imread(os.path.join(self.datadir, folder, sample[1]))
             h, w, c = x.shape
             x = x[int(h/6):, :]

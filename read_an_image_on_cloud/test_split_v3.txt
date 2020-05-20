@@ -1,0 +1,36 @@
+8 SARS-10.1148rg.242035193-g04mr34g05x-Fig5-day9.jpeg pneumonia PA
+31 streptococcus-pneumoniae-pneumonia-temporal-evolution-1-day0.jpg pneumonia PA
+31 streptococcus-pneumoniae-pneumonia-temporal-evolution-1-day1.jpg pneumonia PA
+31 streptococcus-pneumoniae-pneumonia-temporal-evolution-1-day2.jpg pneumonia PA
+31 streptococcus-pneumoniae-pneumonia-temporal-evolution-1-day3.jpg pneumonia PA
+19 1-s2.0-S0929664620300449-gr2_lrg-a.jpg COVID-19 AP
+19 1-s2.0-S0929664620300449-gr2_lrg-b.jpg COVID-19 AP
+19 1-s2.0-S0929664620300449-gr2_lrg-c.jpg COVID-19 AP
+19 1-s2.0-S0929664620300449-gr2_lrg-d.jpg COVID-19 AP
+20 covid-19-pneumonia-15-PA.jpg COVID-19 PA
+36 8FDE8DBA-CFBD-4B4C-B1A4-6F36A93B7E87.jpeg COVID-19 PA
+36 9C34AF49-E589-44D5-92D3-168B3B04E4A6.jpeg COVID-19 PA
+42 1B734A89-A1BF-49A8-A1D3-66FAFA4FAC5D.jpeg COVID-19 PA
+86 B2D20576-00B7-4519-A415-72DE29C90C34.jpeg COVID-19 PA
+86 6C94A287-C059-46A0-8600-AFB95F4727B7.jpeg COVID-19 PA
+94 6b44464d-73a7-4cf3-bbb6-ffe7168300e3.annot.original.jpeg COVID-19 PA
+97 covid-19-rapidly-progressive-acute-respiratory-distress-syndrome-ards-admission.jpg COVID-19 PA
+97 covid-19-rapidly-progressive-acute-respiratory-distress-syndrome-ards-day-1.jpg COVID-19 PA
+97 covid-19-rapidly-progressive-acute-respiratory-distress-syndrome-ards-day-2.jpg COVID-19 PA
+97 covid-19-rapidly-progressive-acute-respiratory-distress-syndrome-ards-day-3.jpg COVID-19 PA
+117 covid-19-pneumonia-evolution-over-a-week-1-day0-PA.jpg COVID-19 PA
+117 covid-19-pneumonia-evolution-over-a-week-1-day3.jpg COVID-19 AP Supine
+117 covid-19-pneumonia-evolution-over-a-week-1-day4.jpg COVID-19 AP Supine
+117 covid-19-pneumonia-evolution-over-a-week-1-day6.jpg COVID-19 AP Supine
+132 covid-19-pneumonia-23-day1.jpg COVID-19 AP Supine
+132 covid-19-pneumonia-23-day3.jpg COVID-19 AP
+132 covid-19-pneumonia-23-day9.jpg COVID-19 AP
+138 RX-torace-a-letto-del-paziente-in-unica-proiezione-AP-1-1.jpeg COVID-19 AP Supine
+144 covid-19-pneumonia-43-day0.jpeg COVID-19 AP Supine
+144 covid-19-pneumonia-43-day2.jpeg COVID-19 AP Supine
+150 figure1-5e7c1b8d98c29ab001275405-98.jpeg COVID-19 AP
+150 figure1-5e7c1b8d98c29ab001275405-98-later.jpeg COVID-19 AP
+163 covid-19-pneumonia-20-pa-on-admission.jpg COVID-19 PA
+163 covid-19-pneumonia-20.jpg COVID-19 PA
+169 covid-19-pneumonia-44-day-0.jpeg COVID-19 PA
+169 covid-19-pneumonia-44-day-8.jpeg COVID-19 AP semi erect
